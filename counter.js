@@ -9,7 +9,7 @@
     F: 70 // FullScreen
   };
   
-  var timestamp = 1800000; // 30 min
+  var timestamp = window.location.hash.split('#')[1] || 30; // 30 min
   var timer = null;
   var content = document.querySelector('.content');
   var timer_wrapper = document.getElementById("timer");
@@ -77,6 +77,8 @@
   };
   
   var getTimeObject = function (t) {
+    t = t * 1000 * 60;
+    
     var seconds = Math.floor((t /= 1000) % 60) + '';
     var minutes = Math.floor((t /= 60) % 60) + '';
     
