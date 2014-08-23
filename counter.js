@@ -29,7 +29,6 @@
     }
     
     generateHTML();
-    start();
   };
   
   var generateHTML = function () {
@@ -90,6 +89,16 @@
       seconds: seconds 
     };
   };
+  
+  document.addEventListener('keyup', function (event) {
+    switch (event.keyCode) {
+      case keyCodes.ENTER:
+        if (!timer) {
+          start();
+        }
+        break;
+    }
+  }, false);
   
   init();
   
