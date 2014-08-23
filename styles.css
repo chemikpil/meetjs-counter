@@ -76,3 +76,23 @@ body{
   background-color: #ee4856;
   box-shadow: 0 5px 0 #c42331;
 }
+
+.footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  
+  text-align: center;
+  color: rgba(255, 255, 255, .3);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+.help-key {
+  display: inline-block;
+  padding: 3px 8px;
+  margin: 0 5px 0 20px;
+  
+  border-radius: 5px;
+  border: 1px solid;
+}
