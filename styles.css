@@ -1,0 +1,75 @@
+@keyframes blink {
+	0% {background-color: #302B36}
+	100% {background-color: #f5616f}
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #302B36;
+
+	color: #fff;
+	font-family: 'Rockwell', cursive;
+}
+
+body.is-complete {
+	animation: blink .5s infinite;
+}
+
+.content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+
+	margin-left: -358px;
+	width: 716px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.content > p {
+	font-size: 30px;
+}
+
+
+.timer {
+	margin-top: 20px;
+	padding-bottom: 100px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	background: url(img/logo.png) no-repeat right bottom;
+}
+
+.divider {
+	font-size: 90px;
+	line-height: 200px;
+}
+
+.number-block {
+	display: block;
+	width: 150px;
+	height: 200px;
+
+	border-radius: 5px;
+
+	background-color: #24a2a7;
+	box-shadow: 0 5px 0 #176a6e;
+
+	font-size: 150px;
+	text-align: center;
+	line-height: 200px;
+}
+
+.so-close .number-block {
+	background-color: #ee4856;
+	box-shadow: 0 5px 0 #c42331;
+}
