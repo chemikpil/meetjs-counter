@@ -5,7 +5,7 @@
   'use stric';
   
   var keyCodes = {
-    ENTER: 13, // Start
+    S: 83, // Start
     F: 70 // FullScreen
   };
   
@@ -96,7 +96,7 @@
   
   document.addEventListener('keyup', function (event) {
     switch (event.keyCode) {
-      case keyCodes.ENTER:
+      case keyCodes.S:
         if (!timer) {
           start();
         }
