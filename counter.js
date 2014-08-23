@@ -5,13 +5,17 @@
   'use stric';
   
   var keyCodes = {
-    ENTER: 13 // Start
+    ENTER: 13, // Start
+    F: 70 // FullScreen
   };
   
-  var timestamp = 15000; // 30 min 1800000
+  var timestamp = 1800000; // 30 min
   var timer = null;
+  var content = document.querySelector('.content');
   var timer_wrapper = document.getElementById("timer");
   var outputs = [];
+  
+  var fullScreen = document.body.requestFullScreen || document.body.webkitRequestFullScreen || document.body.mozRequestFullScreen;
   
   var init = function () {
     var localTime = getTimeObject(timestamp);
@@ -69,7 +73,7 @@
   
   var end = function () {
     window.clearInterval(timer);
-    document.body.classList.add('is-complete');
+    content.classList.add('is-complete');
   };
   
   var getTimeObject = function (t) {
@@ -96,6 +100,9 @@
         if (!timer) {
           start();
         }
+        break;
+      case keyCodes.F:
+        fullScreen.call(document.body);
         break;
     }
   }, false);
